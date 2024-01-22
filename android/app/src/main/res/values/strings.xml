@@ -1,0 +1,3 @@
+<resources>
+    <string name="epresensi_notification_channel_id" translatable="false">epresensi_notification</string>
+</resources>

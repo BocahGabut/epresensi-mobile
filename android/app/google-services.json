@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "606411572487",
+    "project_id": "epresensi-410114",
+    "storage_bucket": "epresensi-410114.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606411572487:android:af715ce009329a7d3c31a2",
+        "android_client_info": {
+          "package_name": "com.bocahgabut.e_absensi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRlF5xi_4vQkPbQm1k1gZvnT8jF35oOgY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

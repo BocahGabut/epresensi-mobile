@@ -1,0 +1,56 @@
+name: e_absensi
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.24.2
+  get: ^4.6.6
+  hexcolor: ^3.0.1
+  shared_preferences: ^2.2.2
+  google_fonts: ^6.1.0
+  http: ^1.1.2
+  firebase_messaging: ^14.7.9
+  firebase_analytics: ^10.7.4
+  device_information: ^0.0.4
+  permission_handler: ^11.1.0
+  flutter_secure_storage: ^9.0.0
+  webview_flutter: ^4.4.2
+  flutter_inappwebview: ^6.0.0
+  geolocator: ^10.1.0
+  flutter_downloader: ^1.11.6
+  path_provider: ^2.1.2
+  url_launcher: ^6.2.3
+  icons_launcher: ^2.1.7
+  awesome_notifications: ^0.9.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+    
+  flutter_lints: ^3.0.1
+
+icons_launcher:
+  image_path: 'assets/icon_epresensi.png'
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/splash-screen.png
