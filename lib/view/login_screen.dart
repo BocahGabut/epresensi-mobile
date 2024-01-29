@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'package:fluttertoast/fluttertoast.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -156,7 +158,15 @@ class LoginScreenState extends State<LoginScreen> {
         ),
       );
     } else {
-      // Handle login failure
+      Fluttertoast.showToast(
+          msg: "Login gagal, Silahkan coba lagi!!",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.TOP,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.red,
+          textColor: Colors.white,
+          fontSize: 16.0
+      );
     }
   }
 }

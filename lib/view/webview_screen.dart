@@ -40,9 +40,10 @@ class _WebViewAppState extends State<WebViewApp> {
         body: Column(
           children: [
             Container(
-              height: 28,
-              color: const Color.fromARGB(255, 255, 255, 255),
-            ),
+                decoration: const BoxDecoration(
+              color: Colors
+                  .transparent,
+            )),
             Expanded(
               child: FutureBuilder<bool>(
                 future: checkServerAccess(
@@ -107,6 +108,9 @@ class _WebViewAppState extends State<WebViewApp> {
                                 desiredAccuracy: LocationAccuracy.high);
                         await controller.evaluateJavascript(
                             source:
+                                "window.document.body.classList.add('mobile-apps')");
+                        await controller.evaluateJavascript(
+                            source:
                                 "window.document.body.classList.add('theme-light')");
                         await controller.evaluateJavascript(
                             source:
@@ -119,17 +123,18 @@ class _WebViewAppState extends State<WebViewApp> {
                           handlerName: 'logoutSuccess',
                           callback: (_) {
                             _logout(context);
+                            print('Logout Success');
                           },
                         );
                         _webViewController = controller;
                       },
                       onLoadStart: (controller, url) async {
                         await controller.evaluateJavascript(
-                            source: "console.log('Here is the message!');");
-
-                        await controller.evaluateJavascript(
                             source:
                                 "window.localStorage.setItem('zeus-token', '${widget.accessToken}')");
+                        await controller.evaluateJavascript(
+                            source:
+                                "window.document.body.classList.add('mobile-apps')");
 
                         final Position position =
                             await Geolocator.getCurrentPosition(
